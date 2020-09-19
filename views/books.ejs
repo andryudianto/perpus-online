@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %>  </title>
+</head>
+<body>
+    <h1> <%= title %>  </h1>
+    <a href="/books/add">Add</a>
+    <input type="search" name="search" placeholder="title">
+    <button type="submit" value="search">Search</button>
+    <table border="1">
+        <tr>
+            <th>No.</th>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Page Count</th>
+            <th>Published Date</th>
+            <th>Authors</th>
+            <th>ategory</th>
+            <th>Action</th>
+        </tr>
+
+        <% for (let i=0; i < data.length; i++){ %>
+            <tr>
+                <td><%= i+1 %> </td>
+                <td><%= data[i].title %> </td>
+                <td><%= data[i].isbn %></td>
+                <td><%= data[i].pageCount %></td>
+                <td><%= data[i].publishedDate %></td>
+                <td><%= data[i].authors %></td>
+                <td><%= data[i].category %></td>
+                <td> <a href="/books/edit/<%= data[i].id %>">Edit</a> || <a href="/books/delete/<%= data[i].id %> ">Delete</a> </td>
+            </tr>
+        <% } %> 
+    </table>
+</body>
+</html>

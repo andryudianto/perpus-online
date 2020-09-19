@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+    <form action="/books/edit/<%= data.id %> " method="POST">
+        <table>
+            <tr>
+                <td><label for="title">Title</label></td>
+                <td> <input type="text" name="title" id="title" value="<%= data.title %> "></td>
+            </tr>
+            <tr>
+                <td><label for="isbn">ISBN</label></td>
+                <td> <input type="text" name="isbn" id="isbn" value="<%= data.isbn %>"></td>
+            </tr>
+            <tr>
+                <td> <label for="pageCount">Page Count</label></td>
+                <td><input type="text" name="pageCount" id="pageCount" value="<%= data.pageCount %>"></td>
+            </tr>
+            <tr>
+                <td><label for="publishedDate">Published Date</label></td>
+                <td> <input type="date" name="publishedDate" id="publishedDate" value="<%= data.publishedDate %>"></td>
+            </tr>
+            <tr>
+                <td><label for="authors">Authors</label></td>
+                <td><input type="text" name="authors" id="authors" placeholder="name1, name2, name3,..." value="<%= data.authors %>"></td>
+            </tr>
+            <tr>
+                <td><label for="category">Category</label></td>
+                <td>
+                    <select name="category" id="category">
+                        <option value="" disabled>--SELECT--</option>
+                        <option value="Programming" <%= data.category == 'Programming' ? 'selected' : '' %> >Programming</option>
+                        <option value="Web Development" <%= data.category == 'Web Development' ? 'selected' : '' %>>Web Development</option>
+                        <option value="Networking"<%= data.category == 'Networking' ? 'selected' : '' %> >Networking</option>
+                        <option value="Java">Java</option>
+                        <option value="Object-Oriented Programming" <%= data.category == 'Object-Oriented Programming' ? 'selected' : '' %>>Object-Oriented Programming</option>
+                        <option value="Internet" <%= data.category == 'Internet' ? 'selected' : '' %>>Internet</option>
+                        <option value="PowerBuilder" <%= data.category == 'PowerBuilder' ? 'selected' : '' %>>PowerBuilder</option>
+                        <option value="Databases" <%= data.category == 'Databases' ? 'selected' : '' %>>Databases</option>
+                        <option value="Microsoft" <%= data.category == 'Microsoft' ? 'selected' : '' %>>Microsoft</option>
+                        <option value="Android" <%= data.category == 'Android' ? 'selected' : '' %>>Android</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>  <button type="submit">Edit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

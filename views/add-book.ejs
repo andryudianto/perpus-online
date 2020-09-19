@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+</head>
+<body>
+    <h1>Add Book</h1>
+    <form action="/books/add" method="POST">
+        <table>
+            <tr>
+                <td><label for="title">Title</label></td>
+                <td> <input type="text" name="title" id="title"></td>
+            </tr>
+            <tr>
+                <td><label for="isbn">ISBN</label></td>
+                <td> <input type="text" name="isbn" id="isbn"></td>
+            </tr>
+            <tr>
+                <td> <label for="pageCount">Page Count</label></td>
+                <td><input type="text" name="pageCount" id="pageCount"></td>
+            </tr>
+            <tr>
+                <td><label for="publishedDate">Published Date</label></td>
+                <td> <input type="date" name="publishedDate" id="publishedDate"></td>
+            </tr>
+            <tr>
+                <td><label for="authors">Authors</label></td>
+                <td><input type="text" name="authors" id="authors" placeholder="name1, name2, name3,..."></td>
+            </tr>
+            <tr>
+                <td><label for="category">Category</label></td>
+                <td>
+                    <select name="category" id="category">
+                        <option value="" selected disabled>--SELECT--</option>
+                        <option value="Programming" >Programming</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Java">Java</option>
+                        <option value="Object-Oriented Programming">Object-Oriented Programming</option>
+                        <option value="Internet">Internet</option>
+                        <option value="PowerBuilder">PowerBuilder</option>
+                        <option value="Databases">Databases</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Android">Android</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>  <button type="submit">Add</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
