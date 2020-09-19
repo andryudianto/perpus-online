@@ -14,10 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "postgres",
-    "password": 12345,
-    "database": "perpus-online",
-    "host": "https://enigmatic-plateau-81270.herokuapp.com",
-    "dialect": "postgres"
+    "username": "kqhhhoxffwfmqd",
+    "password": "cbc0050fe624cefe361c6736e7db62f5d5f6d4a6d89c1611c8d54232932ea155",
+    "database": "d56s4gfg8la99a",
+    "host": "ec2-52-200-134-180.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "port": 5432
   }
 }
